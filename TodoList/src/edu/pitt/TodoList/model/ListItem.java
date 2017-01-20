@@ -1,3 +1,6 @@
+/*
+ * @author jag215 (Jack Gamache)
+ */
 package edu.pitt.TodoList.model;
 
 public class ListItem {

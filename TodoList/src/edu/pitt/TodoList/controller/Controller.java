@@ -1,3 +1,6 @@
+/*
+ * @author jag215 (Jack Gamache)
+ */
 package edu.pitt.TodoList.controller;
 
 import edu.pitt.TodoList.model.*;
@@ -10,10 +13,15 @@ public class Controller {
 	private AddButton addButton;
 	private DeleteButton deleteButton;
 	
+	//intitializes objects passed through as parameters, connects button controllers to button actionListeners
 	public Controller(View view, Model model)
 	{
 		this.view = view;
 		this.model = model;
+		this.addButton = new AddButton(this);
+		this.view.getAdd().addActionListener(addButton);
+		this.deleteButton = new DeleteButton(this);
+		this.view.getDelete().addActionListener(deleteButton);
 	}
 	
 	public View getView()
