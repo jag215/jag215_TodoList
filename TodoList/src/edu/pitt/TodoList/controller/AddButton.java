@@ -20,6 +20,7 @@ public class AddButton implements ActionListener{
 		String item = controller.getView().getEntry().getText();
 		controller.getView().getListModel().addElement(item);
 		controller.getModel().addListItem(item);
+		controller.getView().getEntry().setText("");
 	}
 
 }
